@@ -1,0 +1,36 @@
+.feature-tabs-container {
+  background-color: #141414;
+  border-bottom: 1px solid #3d3d3d;
+  height: 162px;
+}
+
+.feature-tab span {
+  display: block;
+  color: white;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.feature-tab {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-tab:hover {
+  border-bottom: 4px solid #e80000;
+}
+
+.feature-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}

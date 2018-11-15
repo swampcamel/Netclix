@@ -13,8 +13,6 @@ function FeatureContainer(props) {
   }
   else if (props.currentFeatureTab == "WatchFeature") {
     featureToDisplay = <WatchFeature/>
-  // } else {
-  //   featureToDisplay = <CancelFeature/>
   }
 
   return (

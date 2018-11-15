@@ -8,7 +8,7 @@ function HomePage(props) {
   return (
     <div>
     <Header match={props.match}/>
-    <FeatureContainer onChangeFeatureTab={props.changeFeatureTab} currentFeatureTab={props.currentFeatureTab}/>
+    <FeatureContainer onChangeFeatureTab={props.onChangeFeatureTab} currentFeatureTab={props.currentFeatureTab}/>
   </div>
   )
 }

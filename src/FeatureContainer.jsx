@@ -3,19 +3,31 @@ import './FeatureContainer.scss';
 import FeatureTabs from './FeatureTabs';
 import CancelFeature from './CancelFeature';
 import WatchFeature from './WatchFeature';
-import { Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function FeatureContainer() {
+
+function FeatureContainer(props) {
+  let featureToDisplay;
+  if(props.currentFeatureTab == "CancelFeature"){
+    featureToDisplay = <CancelFeature/>
+  }
+  else if (props.currentFeatureTab == "WatchFeature") {
+    featureToDisplay = <WatchFeature/>
+  // } else {
+  //   featureToDisplay = <CancelFeature/>
+  }
+
   return (
     <div>
-      <FeatureTabs/>
-      <Switch>
-        <Route exact path='/' component={CancelFeature} />
-        <Route path='/watchfeature' component={WatchFeature} />
-        <Route path='/pricefeature' component={WatchFeature} />
-      </Switch>
+      <FeatureTabs onChangeFeatureTab={props.onChangeFeatureTab}/>
+      {featureToDisplay}
     </div>
   )
 }
+
+FeatureTabs.propTypes = {
+  currentFeatureTab: PropTypes.string,
+  onChangeFeatureTab: PropTypes.func
+};
 
 export default FeatureContainer;
